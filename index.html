@@ -17,7 +17,7 @@
   <canvas id="jsdos"></canvas>
   <script>
     Dos(document.getElementById("jsdos"), { 
-        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js" 
+        wdosboxUrl: "http://api-backend.apps.openshift.aq.lab/wdosbox.js" 
     }).ready((fs, main) => {
       fs.extract("https://js-dos.com/6.22/current/test/digger.zip").then(() => {
         main(["-c", "DIGGER.COM"])
