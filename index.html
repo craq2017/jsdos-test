@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Digger js-dos 6.22</title>
+  <script src="http://api-backend.apps.openshift.aq.lab/js-dos.js"></script>
+  <style>
+    canvas {
+      width: 640px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="jsdos"></canvas>
+  <script>
+    Dos(document.getElementById("jsdos"), { 
+        wdosboxUrl: "http://api-backend.apps.openshift.aq.labwdosbox.js" 
+    }).ready((fs, main) => {
+      fs.extract("http://api-backend.apps.openshift.aq.lab/cdn/digger.zip").then(() => {
+        main(["-c", "DIGGER.COM"])
+      });
+    });
+  </script>
+</body>
+
+</html>
