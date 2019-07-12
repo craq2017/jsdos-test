@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Digger js-dos 6.22</title>
-  <script src="http://api-backend.apps.openshift.aq.lab/js-dos.js"></script>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
   <style>
     canvas {
       width: 640px;
@@ -17,9 +17,9 @@
   <canvas id="jsdos"></canvas>
   <script>
     Dos(document.getElementById("jsdos"), { 
-        wdosboxUrl: "http://api-backend.apps.openshift.aq.lab/wdosbox.js" 
+        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js" 
     }).ready((fs, main) => {
-      fs.extract("http://api-backend.apps.openshift.aq.lab/cdn/digger.zip").then(() => {
+      fs.extract("https://js-dos.com/6.22/current/test/digger.zip").then(() => {
         main(["-c", "DIGGER.COM"])
       });
     });
